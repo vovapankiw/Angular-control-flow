@@ -1,0 +1,15 @@
+@if (users$ | async; as users) {
+  <div class="user-list">
+    @for (user of users; track user.id; let even = $even) {
+      <div [ngClass]="{even: even}">
+        <app-user [user]="user" />
+      </div>
+    } @empty {
+      <div>No user matches your search</div>      
+    }
+  </div>
+} @else {
+  <div>
+    Loading ...
+  </div>
+}

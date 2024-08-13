@@ -1,0 +1,9 @@
+:host {
+  display: block;
+}
+
+.search {
+  &__container {
+    margin-block-end: 48px;
+  }
+}
